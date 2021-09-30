@@ -1,12 +1,9 @@
 package com.openbeats.openbeatsdaw.controller;
 
 import com.openbeats.openbeatsdaw.Entity.User;
-import com.openbeats.openbeatsdaw.Service.CreateUser;
-import org.springframework.web.bind.annotation.RestController;
+import com.openbeats.openbeatsdaw.Service.UserManagementService;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -15,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class OpenBeatsRestController {
 
     @Autowired
-    private CreateUser createUser;
+    private UserManagementService createUser;
 
     @PostMapping("/createUser")
     public User createUser(@RequestBody User user){
@@ -24,5 +21,14 @@ public class OpenBeatsRestController {
         return  createUser.saveUser(user);
     }
 
+    @GetMapping("/user")
+    public String user() {
+        return ("<h1>Welcome User</h1>");
+    }
+
+    @GetMapping("/")
+    public String home() {
+        return ("<h1>Welcome</h1>");
+    }
 
 }
