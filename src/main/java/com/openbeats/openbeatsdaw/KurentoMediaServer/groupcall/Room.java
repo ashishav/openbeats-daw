@@ -15,7 +15,7 @@
  *
  */
 
-package com.openbeats.openbeatsdaw.KurentoMediaServer;
+package com.openbeats.openbeatsdaw.KurentoMediaServer.groupcall;
 
 import java.io.Closeable;
 import java.io.IOException;

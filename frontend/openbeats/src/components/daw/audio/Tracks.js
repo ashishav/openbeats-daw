@@ -6,6 +6,7 @@ import CancelIcon from "@material-ui/icons/Cancel";
 import Microphone from "./components/Microphone/Microphone";
 import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
 import Fileupload from "../Fileupload";
+import SocketRecord from "../socket/SocketRecord";
 
 //overflowY: 'scroll', height: '400px', max-width: '100%', overflow-x: 'hidden'
 
@@ -44,10 +45,11 @@ function Tracks() {
         <Microphone style={{}} pushFile={pushFile} />
         <div className="p-5 ml-0.5 bg-gr4 hover:bg-gr3">
             <label for={"file-upload"} className=" cursor-pointer">
-                File +</label> 
+                File+</label>
             <input id={"file-upload"} className="text-xs hidden" style={{maxWidth:'100%'}}  type="file" onChange={onFileChange}  />
         </div>
         <Fileupload />
+        <SocketRecord />
       </div>                 
       <Grid container direction="column" spacing={1}>
         {files.map((file, index) => (

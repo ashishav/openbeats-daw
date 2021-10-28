@@ -101,10 +101,10 @@ public class OpenBeatsRestController {
         return ("<h1>Welcome User</h1>");
     }
 
-    @GetMapping("/")
+    /*@GetMapping("/")
     public String home() {
         return ("<h1>Welcome</h1>");
-    }
+    }*/
 
     @GetMapping("/verify")
     public RedirectView verifyUser(@Param("code") String code) {

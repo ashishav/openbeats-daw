@@ -15,7 +15,7 @@
  *
  */
 
-package com.openbeats.openbeatsdaw.KurentoMediaServer;
+package com.openbeats.openbeatsdaw.KurentoMediaServer.groupcall;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -32,20 +32,8 @@ import org.springframework.web.socket.WebSocketSession;
  */
 public class UserRegistry {
 
-  private ConcurrentHashMap<String, UserSession> usersBySessionId = new ConcurrentHashMap<>();
-
-
-  public UserSession getById(String id) {
-    return usersBySessionId.get(id);
-  }
-
-
-  public boolean exists_rec(String id) {
-    return usersBySessionId.keySet().contains(id);
-  }
-
-
   private final ConcurrentHashMap<String, UserSession> usersByName = new ConcurrentHashMap<>();
+  private final ConcurrentHashMap<String, UserSession> usersBySessionId = new ConcurrentHashMap<>();
 
   public void register(UserSession user) {
     usersByName.put(user.getName(), user);

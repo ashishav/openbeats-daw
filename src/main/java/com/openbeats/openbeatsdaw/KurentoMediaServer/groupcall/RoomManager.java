@@ -15,7 +15,7 @@
  *
  */
 
-package com.openbeats.openbeatsdaw.KurentoMediaServer;
+package com.openbeats.openbeatsdaw.KurentoMediaServer.groupcall;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -24,7 +24,6 @@ import org.kurento.client.KurentoClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * @author Ivan Gracia (izanmail@gmail.com)
